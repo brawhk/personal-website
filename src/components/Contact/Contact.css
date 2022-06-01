@@ -3,5 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    background-color: #2b2d2c;
   }
   

@@ -1,6 +1,21 @@
 .about {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: left;
   padding: 5rem;
+  color: white;
+  background-color: #2b2d2c;
+}
+
+.body {
+  margin-top: 2rem;
+}
+
+.pic {
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
+  max-height: 750px;
+  border-radius: 5%;
 }

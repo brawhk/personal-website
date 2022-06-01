@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div>
+    <div style={{fontFamily: "Montserrat"}}>
       <Nav />
       <Landing />
       <About />

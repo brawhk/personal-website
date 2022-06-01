@@ -2,8 +2,10 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 2em;
     height: 100vh;
+    background-color: #2b2d2c;
+    color: white;
 }
