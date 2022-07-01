@@ -1,8 +1,10 @@
 import './Contact.css'
+import Fade from 'react-reveal/Fade'
 
 function Contact() {
   return (
     <div className='contact' id='contact'>
+        <Fade bottom>
         <h1 className='mb-4'>Contact</h1>
         <p>Feel free to contact me via any of the links below!</p>
         {/* <div className='icons'> */}
@@ -32,6 +34,7 @@ function Contact() {
             </a>
           </div>
         </div>
+        </Fade>
         {/* </div> */}
     </div>
   );

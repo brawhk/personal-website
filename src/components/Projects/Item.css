@@ -44,6 +44,9 @@
 
 .card-body {
     width: 100%;
+    box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.125);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .card-link {

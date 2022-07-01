@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col'
 import Confetti from 'react-confetti';
 import {useState, useEffect} from 'react';
 import {useWindowSize} from 'react-use';
+import Fade from 'react-reveal/Fade'
+
 
 function About() {
 
@@ -20,6 +22,7 @@ function About() {
   }, [click])
 
   return (
+    // <Fade bottom>
     <div className='about' id='about'>
       <div className='header mb-4'>
         <h1>About Me</h1>
@@ -56,10 +59,11 @@ function About() {
             width={width - 20}
             height={3 * height}
             onConfettiComplete={() => {setPlay(false);}}
-          />
+            />
         </Col>
       </Row>
     </div>
+    // {/* </Fade> */}
   );
 }
 
