@@ -2,8 +2,23 @@ import './About.css'
 // import pic from '/images/webpic.jpg'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Confetti from 'react-confetti';
+import {useState, useEffect} from 'react';
+import {useWindowSize} from 'react-use';
 
 function About() {
+
+  const {width, height} = useWindowSize();
+  const [click, setClick] = useState(false);
+  const [play, setPlay] = useState(false);
+
+  useEffect(() => {
+    if (click) {
+      setPlay(true);
+      setTimeout(() => {setClick(false)}, "600");
+    }
+  }, [click])
+
   return (
     <div className='about' id='about'>
       <div className='header mb-4'>
@@ -28,7 +43,20 @@ function About() {
           </p>
         </Col>
         <Col xs={12} md={6} lg={5}>
-          <img className='mx-auto d-block picture' src='/images/webpic.jpg'/>
+          <input type="checkbox" id="btn" checked={click}/>
+          <label className='mx auto d-block' for="btn">
+            <img className='mx-auto d-block picture' src='/images/webpic.jpg' onClick={() => {setClick(true);}}/>
+          </label>
+          <Confetti
+            style={{position: 'absolute', top: '75%'}}
+            run={play}
+            gravity={0.5}
+            numberOfPieces={500}
+            recycle={false}
+            width={width - 20}
+            height={3 * height}
+            onConfettiComplete={() => {setPlay(false);}}
+          />
         </Col>
       </Row>
     </div>

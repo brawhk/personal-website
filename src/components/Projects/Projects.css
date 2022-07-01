@@ -2,12 +2,22 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  padding: 5rem;
+  align-items: left;
+  padding: 5rem calc(5px + 15vw);
   color: white;
-  background-color: #2b2d2c
+  background-color: #2b2d2c;
 }
 
-.items {
+/* .projects .header {
+  max-width: 75%;
+} */
+
+.projects .header {
+  align-self: center;
+}
+
+.projects .items {
+  /* max-width: 75%; */
   color: black;
+  display: flex;
 }

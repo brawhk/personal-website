@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button'
 function Item(props) {
   return (
     <div className='item'>
-        <Col>
+        <Col className='outer' xs={12} sm={10} md={props.data.demo ? 6 : 12} xl={props.data.demo ? 4 : 8}>
           <Card className='shadow'>
             <Card.Img variant="top" src={props.data.logoPath} />
             <Card.Body>
@@ -19,9 +19,20 @@ function Item(props) {
               </Card.Text>
             </Card.Body>
           </Card>
+          {/* {
+            props.data.demo &&
+            <Col md={2}>
+              <img className='demo' src={props.data.demoPath}/>
+            </Col>
+          } */}
         </Col>
+        {
+            props.data.demo &&
+            <Col className='inner mx-0' md={6} xl={4}>
+              <img className='demo' src={props.data.demoPath}/>
+            </Col>
+          }
     </div>
-    
   );
 }
 

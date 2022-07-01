@@ -11,7 +11,8 @@ const data = [
     logoPath: '',
     title: 'Personal Website',
     link: 'https://github.com/brawhk/personal-website',
-    desc: 'View the source code for this website! Created using React'
+    desc: 'View the source code for this website! Created using React',
+    demo: false
   },
   {
     id: 1,
@@ -20,7 +21,10 @@ const data = [
     link: 'https://github.com/brawhk/FitTrackPlus',
     desc: `A social fitness tracking application for iOS developed using React Native. Log workout data and 
     weight history with graphs to view progress over time. Log daily caloric intake using API to search for 
-    calorie info on select foods, or manually add meals. Join groups with friends to chat and view their progress`
+    calorie info on select foods, or manually add meals. Join groups with friends to chat and view their progress`,
+    demo: true,
+    demoPath: '/images/fittrackplus.png'
+  
   },
   {
     id: 2,
@@ -28,7 +32,9 @@ const data = [
     title: 'FitTrack',
     link: 'https://github.com/brawhk/FitTrack',
     desc: `A fitness tracking web app developed using Django. View suggested workouts to hit certain muscle
-    groups and add them to today's workout log. Log workout data and weight history with graphs to view progress over time.`
+    groups and add them to today's workout log. Log workout data and weight history with graphs to view progress over time.`,
+    demo: true,
+    demoPath: '/images/Fittrack results.png'
   },
   
 
@@ -37,12 +43,12 @@ const data = [
 function Projects() {
   return (
     <div className='projects' id='projects'>
-      <div className='header'>
+      <div className='header mb-4'>
         <h1>Projects</h1>
       </div>
       <div className='items'>
         {/* <Item/> */}
-        <Row xs={1} md={2} className="g-4">
+        <Row xs={12} className='g-4 mx-0'>
           {Array.from({ length: data.length }).map((_, i) => (
             <Item data={data[i]}/>
           ))}

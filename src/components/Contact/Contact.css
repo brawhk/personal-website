@@ -9,7 +9,7 @@
     padding: 5rem;
 }
 
-.icons {
+.icons, .links {
   display: flex;
   flex-direction: column;
 }
@@ -26,10 +26,46 @@ svg:hover {
 }
 
 .contact a {
-  text-decoration: none;
+  color: inherit;
+}
+
+.contact a:hover {
   color: inherit;
 }
   
 .contact p {
     font-size: calc(15px + 0.8vw);
+}
+
+.website {
+  display: none;
+  justify-content: center;
+}
+
+@media(min-width: 768px) {
+  .links {
+    flex-direction: row;
+  }
+
+  .link {
+    margin-left: calc(15px + 1.5vw);
+    margin-right: calc(15px + 1.5vw);
+  }
+
+  svg:hover + .website {
+    display: flex;
+    transform: scale(1.1);
+  }
+
+  svg {
+    margin-bottom: 1rem;
+  }
+
+  .contact .website {
+    font-size: calc(15px + 0.5vw);
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
 }
