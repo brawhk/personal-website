@@ -11,7 +11,7 @@ function Item(props) {
     <div className='item'>
         <Col className='outer' xs={12} sm={10} md={props.data.demo ? 6 : 12} xl={props.data.demo ? 4 : 8}>
           <Card className='shadow'>
-            {props.data.logo && <Card.Img variant="top p-5" src={props.data.logoPath} />}
+            {props.data.logo && <Card.Img variant="top p-3" src={props.data.logoPath} />}
             <Card.Body>
               <Card.Link target="_blank" href={props.data.link}>{props.data.title}</Card.Link>
               <Card.Text>

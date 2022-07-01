@@ -86,4 +86,8 @@
     .demo {
       display: none;
     }
+
+    .card-img-top {
+        object-fit: scale-down;
+    }
 }
