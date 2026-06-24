@@ -39,10 +39,10 @@ function About() {
       <Row className="justify-content-md-center">
         <Col xs={12} md={6} lg={7}>
           <p>
-            Hello! My name is Brock and I am a Spring 2022 graduate from the University of Florida with a major in Computer Science and a minor in Business Administration. I began coding back in 2014, and have had a passion for it ever since!
+            Hello! My name is Brock and I am a software engineer with 3+ years of experience building full-stack features at Epic Systems. I worked on MyChart Bedside, a patient-facing platform used by over 190 million people globally, using React, .NET/C#, Swift, and Kotlin.
             <br/>
             <br/>
-            I am currently searching for full time Software Engineering positions.
+            I graduated from the University of Florida in 2022 with a degree in Computer Science and have had a passion for building things ever since. I am currently looking for SDE2 opportunities in New York City.
           </p>
         </Col>
         <Col xs={12} md={6} lg={5}>

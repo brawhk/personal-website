@@ -1,0 +1,80 @@
+.experience {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem calc(5px + 15vw);
+  color: white;
+  background-color: #2b2d2c;
+}
+
+.experience .header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.experience-card {
+  background-color: #3a3b3c;
+  border: none;
+  border-radius: 8px;
+  padding: 2rem;
+  color: white;
+  width: 100%;
+}
+
+.experience-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.epic-logo {
+  width: 60px;
+  height: auto;
+}
+
+.experience-card .role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.experience-card .company {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.experience-summary {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.experience-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background-color: #2b2d2c;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  min-width: 160px;
+  max-width: 220px;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

@@ -1,7 +1,7 @@
 import Nav from "./components/Navigation/Navigation";
 import Landing from "./components/Landing/Landing";
 import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
+import Experience from "./components/Experience/Experience";
 import Contact from "./components/Contact/Contact";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,7 +13,7 @@ function App() {
       <Nav />
       <Landing />
       <About />
-      <Projects />
+      <Experience />
       <Contact />
     </div>
   );

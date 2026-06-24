@@ -14,7 +14,7 @@ function Navigation() {
               <Nav.Link href="#about">About</Nav.Link>
             </Fade>
             <Fade top delay={100}>
-              <Nav.Link href="#projects">Projects</Nav.Link>
+              <Nav.Link href="#experience">Experience</Nav.Link>
             </Fade>
             <Fade top delay={200}>
               <Nav.Link href="#contact">Contact</Nav.Link>
