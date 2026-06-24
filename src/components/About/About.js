@@ -46,8 +46,8 @@ function About() {
           </p>
         </Col>
         <Col xs={12} md={6} lg={5}>
-          <input type="checkbox" id="btn" checked={click}/>
-          <label className='mx auto d-block' for="btn">
+          <input type="checkbox" id="btn" checked={click} readOnly/>
+          <label className='mx auto d-block' htmlFor="btn">
             <img className='mx-auto d-block picture' src='/images/webpic.jpg' onClick={() => {setClick(true);}}/>
           </label>
           <Confetti
