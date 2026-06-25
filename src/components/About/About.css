@@ -1,23 +1,109 @@
 .about {
-  padding: 6rem calc(5px + 15vw);
-  color: #f5f0ea;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem calc(5px + 12vw);
   background-color: #1c1714;
   border-top: 1px solid rgba(245, 240, 234, 0.07);
-  scroll-margin-top: 56px;
 }
 
-.about h1 {
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-col-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #857870;
+  margin-bottom: 1.25rem;
+}
+
+/* Bio column */
+
+.about-bio p {
+  font-size: calc(14px + 0.2vw);
+  color: #c8c0b5;
+  max-width: 40ch;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Experience column */
+
+.about-entry-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.about-epic-logo {
+  width: 36px;
+  height: auto;
+}
+
+.about-entry-role {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f5f0ea;
+  margin-bottom: 0.15rem;
+}
+
+.about-entry-company {
+  font-size: 0.8rem;
+  color: #9a8e82;
+}
+
+.about-entry-summary {
+  font-size: calc(13px + 0.2vw);
+  color: #c8c0b5;
+  line-height: 1.75;
   margin-bottom: 1.5rem;
 }
 
-.about p {
-  font-size: calc(15px + 0.3vw);
-  color: #c8c0b5;
-  max-width: 68ch;
-  line-height: 1.75;
-  margin-bottom: 1rem;
+.about-stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
 }
 
-.about p:last-child {
-  margin-bottom: 0;
+.stat-value {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  color: #d4974a;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.68rem;
+  color: #857870;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.about-stack {
+  font-family: 'Ubuntu Mono', 'Courier New', monospace;
+  font-size: 0.82rem;
+  color: #857870;
+  margin-top: 1.5rem !important;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 767px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-bio p {
+    max-width: none;
+  }
 }

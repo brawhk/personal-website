@@ -3,7 +3,6 @@ import './Experience.css'
 function Experience() {
   return (
     <div className='experience' id='experience'>
-      <h1>Experience</h1>
       <div className='experience-entry'>
         <div className='experience-header'>
           <img src='/images/epic-logo.png' alt='Epic Systems' className='epic-logo' />
