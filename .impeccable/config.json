@@ -1,0 +1,62 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-color",
+        "value": "#1c1714",
+        "reason": "New dark-base: warm near-black palette redesign",
+        "createdAt": "2026-06-25T14:50:27.996Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#2a231e",
+        "reason": "New surface-card: warm dark brown",
+        "createdAt": "2026-06-25T14:50:34.771Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#d4974a",
+        "reason": "Ember Amber: primary accent",
+        "createdAt": "2026-06-25T14:50:34.815Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#f5f0ea",
+        "reason": "New ink-primary: warm off-white",
+        "createdAt": "2026-06-25T14:50:34.861Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#c8c0b5",
+        "reason": "New ink-body: warm silver",
+        "createdAt": "2026-06-25T14:50:34.905Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#9a8e82",
+        "reason": "New ink-secondary: warm stone",
+        "createdAt": "2026-06-25T14:50:34.948Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#857870",
+        "reason": "New ink-tertiary: warm muted",
+        "createdAt": "2026-06-25T14:50:34.991Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(245, 240, 234, 0.3)",
+        "reason": "Scrollbar thumb from ink-primary",
+        "createdAt": "2026-06-25T14:50:35.033Z"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "16px",
+        "reason": "Scrollbar thumb radius, UI chrome",
+        "createdAt": "2026-06-25T14:50:35.077Z"
+      }
+    ]
+  }
+}

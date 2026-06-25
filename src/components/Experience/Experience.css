@@ -1,80 +1,64 @@
 .experience {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5rem calc(5px + 15vw);
-  color: white;
-  background-color: #2b2d2c;
+  padding: 6rem calc(5px + 15vw);
+  color: #f5f0ea;
+  background-color: #1c1714;
+  border-top: 1px solid rgba(245, 240, 234, 0.07);
+  scroll-margin-top: 56px;
 }
 
-.experience .header {
-  text-align: center;
-  margin-bottom: 2rem;
+.experience h1 {
+  margin-bottom: 2.5rem;
 }
 
-.experience-card {
-  background-color: #3a3b3c;
-  border: none;
-  border-radius: 8px;
-  padding: 2rem;
-  color: white;
-  width: 100%;
-}
-
-.experience-card-header {
+.experience-header {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .epic-logo {
-  width: 60px;
+  width: 44px;
   height: auto;
 }
 
-.experience-card .role {
-  font-size: 1.2rem;
+.role {
+  font-size: 1.1rem;
   font-weight: 600;
+  color: #f5f0ea;
   margin-bottom: 0.2rem;
 }
 
-.experience-card .company {
+.company {
   font-size: 0.9rem;
-  color: #aaa;
+  color: #9a8e82;
 }
 
 .experience-summary {
-  font-size: 0.95rem;
-  color: #ccc;
-  margin-bottom: 2rem;
+  font-size: calc(15px + 0.3vw);
+  color: #c8c0b5;
+  max-width: 68ch;
+  line-height: 1.75;
+  margin-bottom: 3rem;
 }
 
 .experience-stats {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   flex-wrap: wrap;
 }
 
-.stat {
-  background-color: #2b2d2c;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  min-width: 160px;
-  max-width: 220px;
-}
-
 .stat-value {
-  font-size: 1.3rem;
+  font-size: clamp(2.2rem, 4vw, 3rem);
   font-weight: 700;
-  color: white;
-  margin-bottom: 0.25rem;
+  color: #d4974a;
+  line-height: 1;
+  margin-bottom: 0.4rem;
 }
 
 .stat-label {
   font-size: 0.8rem;
-  color: #888;
+  color: #857870;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }

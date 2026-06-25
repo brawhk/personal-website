@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
 
   return (
-    <div style={{fontFamily: "Montserrat", backgroundColor: '#2b2c2d'}}>
+    <div style={{fontFamily: "-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif", backgroundColor: '#1c1714'}}>
       <Nav />
       <Landing />
       <About />

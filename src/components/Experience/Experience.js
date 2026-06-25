@@ -3,19 +3,20 @@ import './Experience.css'
 function Experience() {
   return (
     <div className='experience' id='experience'>
-      <div className='header mb-4'>
-        <h1>Experience</h1>
-      </div>
-      <div className='experience-card'>
-        <div className='experience-card-header'>
+      <h1>Experience</h1>
+      <div className='experience-entry'>
+        <div className='experience-header'>
           <img src='/images/epic-logo.png' alt='Epic Systems' className='epic-logo' />
           <div>
             <div className='role'>Software Engineer</div>
-            <div className='company'>Epic Systems · March 2023 – June 2026</div>
+            <div className='company'>Epic Systems &middot; March 2023 – June 2026</div>
           </div>
         </div>
         <p className='experience-summary'>
-          Built full-stack features for MyChart Bedside, a patient-facing platform used by over 190 million people globally, across web, iOS, and Android. This included leading development of a communication portal that let patients and their families exchange digital greeting cards throughout their hospital stay.
+          Built full-stack features for MyChart Bedside, a patient-facing platform used
+          by over 190 million people globally, across web, iOS, and Android. This included
+          leading development of a communication portal that let patients and their
+          families exchange digital greeting cards throughout their hospital stay.
         </p>
         <div className='experience-stats'>
           <div className='stat'>

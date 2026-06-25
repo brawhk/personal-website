@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-24T00:00:00Z",
+  "title": "Design System: Brock Major — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "dark-base": {
+        "role": "neutral",
+        "displayName": "Cold Concrete",
+        "canonical": "#2b2d2c",
+        "tonalRamp": ["#141514", "#1c1e1d", "#2b2d2c", "#3a3b3a", "#505150", "#6b6c6b", "#979897", "#c5c6c4"]
+      },
+      "surface-card": {
+        "role": "neutral",
+        "displayName": "Lifted Surface",
+        "canonical": "#3a3b3c",
+        "tonalRamp": ["#1e1f20", "#292a2b", "#3a3b3c", "#4a4b4c", "#606162", "#7b7c7d", "#a0a1a2", "#c8c9ca"]
+      },
+      "ink-primary": {
+        "role": "neutral",
+        "displayName": "Clean White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#565756", "#6a6b6a", "#808180", "#9a9b9a", "#b5b6b5", "#cecfce", "#e5e6e5", "#ffffff"]
+      },
+      "ink-body": {
+        "role": "neutral",
+        "displayName": "Silver Mist",
+        "canonical": "#cccccc",
+        "tonalRamp": ["#444444", "#5a5a5a", "#717171", "#888888", "#a0a0a0", "#b8b8b8", "#cccccc", "#e8e8e8"]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Stone Mid",
+        "canonical": "#aaaaaa",
+        "tonalRamp": ["#2e2e2e", "#404040", "#555555", "#6a6a6a", "#808080", "#959595", "#aaaaaa", "#d0d0d0"]
+      },
+      "ink-tertiary": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#888888",
+        "tonalRamp": ["#1f1f1f", "#2f2f2f", "#424242", "#555555", "#686868", "#787878", "#888888", "#b8b8b8"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display / Hero Mono", "purpose": "Hero typewriter only. Ubuntu Mono in the <code> element. Never used elsewhere." },
+      "headline": { "displayName": "Headline / Section", "purpose": "One h1 per section. About Me, Experience, Contact." },
+      "title": { "displayName": "Title / Component", "purpose": "Role title in experience card. Component-level headings only." },
+      "body": { "displayName": "Body", "purpose": "About paragraph, experience summary. Cap at 65–75ch." },
+      "label": { "displayName": "Label / Meta", "purpose": "Stat chip labels, company metadata. Large text only — #888888 at small sizes fails AA." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "hover-scale-icon", "value": "transform scale(1.1) over 200ms ease", "purpose": "Contact SVG icons on hover." },
+      { "name": "hover-scale-photo", "value": "transform scale(1.03) over 200ms ease", "purpose": "Profile photo on hover." },
+      { "name": "label-reveal", "value": "visibility + opacity 0→1 over 200ms ease", "purpose": "Contact label text reveal on icon hover. visibility/opacity avoids layout reflow." },
+      { "name": "fade-in-top", "value": "opacity 0→1 + translateY from above, via react-reveal/Fade", "purpose": "Nav links staggered entrance on page load (0ms, 100ms, 200ms delay)." },
+      { "name": "typewriter", "value": "character-by-character insertion via typewriter-effect", "purpose": "Hero 'Hello World!' text. Pauses 500ms before starting." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px", "purpose": "Bootstrap md breakpoint. Nav icons arrange horizontally; contact labels become visible on hover." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Fixed top nav link. White at rest, softens on hover. No background change.",
+      "html": "<a class=\"ds-nav-link\" href=\"#experience\">Experience</a>",
+      "css": ".ds-nav-link { display: inline-block; color: #ffffff; background: transparent; font-size: 1rem; padding: 0.5rem 1rem; text-decoration: none; transition: color 200ms ease; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; } .ds-nav-link:hover { color: #aaaaaa; text-decoration: none; } .ds-nav-link:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; border-radius: 2px; }"
+    },
+    {
+      "name": "Experience Card",
+      "kind": "card",
+      "refersTo": "experience-card",
+      "description": "The site's only content card. Lifted Surface background. Header row + summary + stat chips.",
+      "html": "<div class=\"ds-experience-card\"><div class=\"ds-exp-header\"><div class=\"ds-exp-text\"><div class=\"ds-role\">Software Engineer</div><div class=\"ds-company\">Epic Systems · March 2023 – June 2026</div></div></div><p class=\"ds-exp-summary\">Built full-stack features for MyChart Bedside, a patient-facing platform used by over 190 million people globally, across web, iOS, and Android.</p><div class=\"ds-stats\"><div class=\"ds-stat\"><div class=\"ds-stat-value\">190M+</div><div class=\"ds-stat-label\">users reached</div></div><div class=\"ds-stat\"><div class=\"ds-stat-value\">15K+</div><div class=\"ds-stat-label\">patient e-cards sent</div></div></div></div>",
+      "css": ".ds-experience-card { background-color: #3a3b3c; border-radius: 8px; padding: 2rem; color: #ffffff; width: 100%; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; } .ds-exp-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; } .ds-exp-text { } .ds-role { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.2rem; } .ds-company { font-size: 0.9rem; color: #aaaaaa; } .ds-exp-summary { font-size: 0.95rem; color: #cccccc; margin-bottom: 2rem; line-height: 1.6; } .ds-stats { display: flex; gap: 2rem; flex-wrap: wrap; } .ds-stat { background-color: #2b2d2c; border-radius: 8px; padding: 1rem 1.5rem; min-width: 160px; max-width: 220px; } .ds-stat-value { font-size: 1.3rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem; } .ds-stat-label { font-size: 0.8rem; color: #888888; text-transform: uppercase; letter-spacing: 0.05em; }"
+    },
+    {
+      "name": "Stat Chip",
+      "kind": "custom",
+      "refersTo": "stat-chip",
+      "description": "Standalone stat display. Cold Concrete bg on Lifted Surface card — the 'punches through' effect.",
+      "html": "<div class=\"ds-stat-chip\"><div class=\"ds-chip-value\">190M+</div><div class=\"ds-chip-label\">users reached</div></div>",
+      "css": ".ds-stat-chip { background-color: #2b2d2c; border-radius: 8px; padding: 1rem 1.5rem; min-width: 160px; max-width: 220px; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; } .ds-chip-value { font-size: 1.3rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem; } .ds-chip-label { font-size: 0.8rem; color: #888888; text-transform: uppercase; letter-spacing: 0.05em; }"
+    },
+    {
+      "name": "Contact Icon Link",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "SVG icon + hover-reveal label. The visibility/opacity pattern prevents layout reflow. Desktop only for label reveal.",
+      "html": "<div class=\"ds-contact-link\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"ds-contact-svg\"><path d=\"M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z\"></path></svg><p class=\"ds-contact-label\">LinkedIn</p></div>",
+      "css": ".ds-contact-link { display: inline-flex; flex-direction: column; align-items: center; color: #ffffff; text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; } .ds-contact-svg { width: 3rem; height: auto; margin: 1rem; transition: transform 200ms ease; } .ds-contact-link:hover .ds-contact-svg { transform: scale(1.1); } .ds-contact-label { visibility: hidden; opacity: 0; transition: opacity 200ms ease; font-size: 1rem; color: #ffffff; margin: 0; text-align: center; } .ds-contact-link:hover .ds-contact-label { visibility: visible; opacity: 1; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Sharp Handshake",
+    "overview": "Brock Major's portfolio is built on a single conviction: the design gets out of the way so the person gets noticed. The palette is nearly monochromatic charcoal — dark, calm, achromatic. The atmosphere is a well-lit room where the work and the person are the only things in it. Nothing decorative enters without earning its place. Nothing shouts. Nothing performs.\n\nThis system explicitly rejects the generic dark Bootstrap portfolio with floating cards and no human voice; the overwrought creative portfolio with WebGL scenes and custom cursor trails; the cold corporate bio that reads like a LinkedIn summary; and the 'Hello World!' typewriter hero, which by 2026 is a cliché that has outlived any warmth it once had.\n\nThe system's biggest open gap is color: the current palette has no accent. This is a documented absence. Picking and committing to one accent is the highest-leverage move available.",
+    "keyCharacteristics": [
+      "Near-monochromatic dark base — one background tone, one surface tone",
+      "No accent color (documented gap — the single biggest upgrade available)",
+      "System fonts everywhere except the hero mono — readable, fast, honest",
+      "Fluid type scale — every size adapts with the viewport",
+      "Flat-by-default elevation — surfaces lift by luminance delta, not box-shadow",
+      "Specificity carries credibility — stats and outcomes over responsibilities"
+    ],
+    "rules": [
+      { "name": "The No-Accent Rule", "body": "The palette has no accent color. This is documented as a gap, not justified as restraint. Until an accent is chosen and committed to, do not introduce ad hoc color.", "section": "colors" },
+      { "name": "The Contrast Floor Rule", "body": "#888888 on #2b2d2c is 3.9:1. Permissible for large text only (≥18px or bold ≥14px). Never use as body copy color.", "section": "colors" },
+      { "name": "The One-Mono Rule", "body": "Ubuntu Mono appears in exactly one context: the hero <code> element. Do not introduce mono type elsewhere. Its rarity is what makes it signal something.", "section": "typography" },
+      { "name": "The Missing Subtitle Rule", "body": "The hero stops at 'My name is Brock Major.' with no subtitle. A recruiter in the first five seconds has no idea what Brock does. This is the most urgent content fix on the site.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Do not introduce box-shadow on any component. Elevation is tonal — step the background color up in luminance instead.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do let specificity carry credibility — '190M+ users reached' and '15K+ patient e-cards sent' are more convincing than five bullet points.",
+      "Do introduce one accent color before the next deploy.",
+      "Do fix the broken Ubuntu Mono font import in Landing.css (points to http://example.com/fonts/ubuntu.woff).",
+      "Do add a hero subtitle that communicates what Brock does in under 10 words.",
+      "Do cap the About paragraph line length at 65–75ch.",
+      "Do use text-wrap: balance on section h1 headings.",
+      "Do verify #888888 stat labels render at ≥18px before shipping."
+    ],
+    "donts": [
+      "Don't replicate the 'Hello World!' typewriter hero — it's explicitly on the anti-references list.",
+      "Don't use border-left or border-right greater than 1px as a colored accent on cards or callouts.",
+      "Don't use gradient text (background-clip: text).",
+      "Don't add WebGL, custom cursor effects, or heavy entrance choreography.",
+      "Don't add box-shadow to the experience card or any component.",
+      "Don't use #888888 at body-text scale (below 18px) — fails WCAG AA.",
+      "Don't write the About section in the third person or corporate register.",
+      "Don't invent numbered section markers (01, 02, 03) or tiny uppercase eyebrows as default scaffolding.",
+      "Don't add a second accent before committing to the first."
+    ]
+  }
+}

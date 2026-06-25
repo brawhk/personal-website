@@ -1,38 +1,101 @@
-@font-face {
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Ubuntu'), url(http://example.com/fonts/ubuntu.woff) format('woff');
-}
-
 .landing {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 2em;
-    height: 100vh;
-    background-color: #2b2d2c;
-    color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 calc(5px + 15vw);
+  background-color: #1c1714;
 }
 
-h1, code {
-    font-size: calc(1.375rem + 1.5vw)!important;
-    color: white!important;
+.landing-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
 }
 
-code {
-    font-family: 'Ubuntu Mono'!important;
+.landing-text {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-.Typewriter__cursor {
-    position: absolute!important;
+.landing-name {
+  font-family: 'Ubuntu Mono', 'Courier New', monospace;
+  font-size: clamp(2.5rem, 6.5vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #d4974a;
+  margin: 0 0 1.75rem;
+  text-wrap: pretty;
 }
 
-.type {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
+.landing-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.landing-role {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  font-weight: 500;
+  color: #f5f0ea;
+  margin: 0;
+}
+
+.landing-context {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(0.875rem, 1.4vw, 1rem);
+  color: #9a8e82;
+  margin: 0;
+}
+
+.landing-photo-col {
+  flex: 0 0 auto;
+}
+
+.landing-photo {
+  display: block;
+  max-height: clamp(260px, 40vh, 440px);
+  width: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .landing-photo-col {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .landing-name {
+    animation: heroReveal 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .landing-details {
+    animation: heroReveal 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  }
+
+  .landing-photo-col {
+    animation: photoReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+  }
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes photoReveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
