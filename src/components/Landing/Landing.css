@@ -104,8 +104,22 @@
 }
 
 @media (max-width: 767px) {
+  .landing {
+    padding: 4rem calc(5px + 6vw);
+  }
+
+  .landing-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .landing-photo-col {
-    display: none;
+    align-self: center;
+  }
+
+  .landing-photo {
+    height: clamp(340px, 50vh, 480px);
+    width: auto;
   }
 }
 
