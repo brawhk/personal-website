@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 6rem calc(5px + 12vw);
+  padding: 6rem calc(5px + 10vw);
   background-color: #1c1714;
   border-top: 1px solid rgba(245, 240, 234, 0.07);
 }
@@ -74,7 +74,7 @@
 }
 
 .stat-value {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.6rem, 2.5vw, 2.8rem);
   font-weight: 700;
   color: #d4974a;
   line-height: 1;
