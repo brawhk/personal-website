@@ -48,8 +48,12 @@ function About() {
             in 2022 with a degree in Computer Science and I'm currently looking for
             SDE2 opportunities in New York City.
           </p>
-          <p className='about-stack'>
-            {['React', 'TypeScript', '.NET / C#', 'Swift', 'Kotlin', 'SQL'].join(' · ')}
+          <p className='about-bio-text' style={{marginTop: '1rem'}}>
+            Outside of work, I stay pretty active — I lift most days and have gotten into
+            running over the past year or so. There's something about having a training goal
+            that I find keeps me grounded. I also love to travel whenever I get the chance;
+            exploring a new city, trying the food, and just being somewhere unfamiliar for
+            a bit is one of my favorite ways to reset.
           </p>
         </div>
 
@@ -78,6 +82,9 @@ function About() {
               <div className='stat-label'>patient e-cards sent</div>
             </div>
           </div>
+          <p className='about-stack'>
+            {['React', 'TypeScript', '.NET / C#', 'Swift', 'Kotlin', 'SQL'].join(' · ')}
+          </p>
         </div>
 
       </div>
