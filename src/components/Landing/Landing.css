@@ -115,7 +115,7 @@
   object-fit: cover;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .landing {
     padding: 4rem calc(5px + 6vw);
   }

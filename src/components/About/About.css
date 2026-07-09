@@ -97,7 +97,7 @@
   letter-spacing: 0.01em;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
